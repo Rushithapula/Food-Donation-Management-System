@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<style>
+    #Navbar {
+        display: flex;
+        background-color: teal;
+        justify-content: space-around;
+        height: 100px;
+    }
+
+    #logo {
+        font-size: 50px;
+        line-height: 100px;
+        color: white;
+    }
+
+    #list {
+        display: flex;
+        justify-content: space-between;
+        font-size: xx-large;
+        color: white;
+        line-height: 90px;
+    }
+
+    #list>a {
+        padding: 10px;
+    }
+
+    #list>a>div:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+    .container {
+        width: 30%;
+        margin: auto;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px 10px 20px 10px;
+        text-align: center;
+    }
+
+    table {
+        margin: auto;
+    }
+
+    btn {
+        margin: auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+<html>
+<title>Donar Form</title>
+
+<body>
+    <div id="Navbar">
+        <div id="logo">FDM</div>
+        <div id="list">
+            <a href="about.html">
+                <div>About Us </div>
+            </a>
+            <a href="donor.html">
+                <div>Donate</div>
+            </a>
+            <a href="receiver.html">
+                <div>Request</div>
+            </a>
+        </div>
+    </div>
+    <h1 style="text-align:center;">Donar Details</h1>
+    <div class="container">
+        <form id="form">
+            <table>
+                <tr>
+                    <td>
+                        FirstName:
+                    </td>
+                    <td>
+                        <input type="text" placeholder="FirstName" name="" style="text-align:center;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        LastName:
+                    </td>
+                    <td>
+                        <input type="text" placeholder="LastName" name="" style="text-align:center;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        email-ID:
+                    </td>
+                    <td>
+                        <input type="email" placeholder="example@g*.com" style="text-align:center;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        phone-no:
+                    </td>
+                    <td>
+                        <input type="phone" placeholder="+91**********" style="text-align:center;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Address:
+                    </td>
+                    <td>
+                        <textarea row="5" col="17" placeholder="address" style="text-align:center;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        No of Items:
+                    </td>
+                    <td>
+                        <input type="No of Items" placeholder="No of Items:" style="text-align:center;">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        Food Items:
+                    </td>
+                    <td>
+                        <input type="name" placeholder="list of food items" style="text-align:center;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Food Quantity:
+                    </td>
+                    <td>
+                        <input type="quantity" placeholder="Amount of food" style="text-align:center;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Date:
+                    </td>
+                    <td>
+                        <input type="date" placeholder="dd/mm/yyyy" style="text-align:center;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Time:
+                    </td>
+                    <td>
+                        <input type="time" placeholder="hh:mm:ss tt" style="text-align:center;">
+                    </td>
+
+                </tr>
+            </table>
+            <input id="submit" type="submit" style="background-color:rgb(104, 199, 156);;border-color: black">
+        </form>
+
+        <!-- <button id="reset" style ="background-color:rgb(237, 92, 92) ;;border-color: black">reset</button>                                                    -->
+    </div>
+</body>
+<script>
+    document.querySelector("#form").addEventListener("submit", hello)
+
+    function hello() {
+        event.preventDefault();
+        alert("Form submited");
+    }
+</script>
+
+</html>

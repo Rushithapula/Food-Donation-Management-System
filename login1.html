@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        /* Navbar */
+        #Navbar {
+            text-align: center;
+            background-color: teal;
+            height: 100px;
+            margin-bottom: 50px;
+        }
+
+        #logo {
+            font-size: 50px;
+            line-height: 100px;
+            color: white;
+        }
+
+        /* form  */
+        #container {
+            width: 30%;
+            margin: auto;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 10px 20px 10px 20px;
+        }
+
+        #form>input {
+            width: 60%;
+            margin: auto;
+            display: block;
+            height: 30px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            width: 60%;
+            margin: auto;
+            display: block;
+            height: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #form>h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Navbar">
+        <div id="logo">Food Donation Management</div>
+    </div>
+    <div id="container">
+        <form id="form">
+            <h3>Login</h3>
+            <input type="text" id="email" placeholder="email"><br>
+            <input type="password" id="password" placeholder="password"><br>
+            <input type="submit"><br>
+        </form>
+        <p>Create New Account??</p>
+        <a href="signup.html">
+            <button>Sign up</button></a>
+    </div>
+</body>
+<script>
+    var form = document.querySelector("#form")
+
+    form.addEventListener("submit", logincheck)
+    var loginarr = JSON.parse(localStorage.getItem("signupdata"))
+
+    function logincheck() {
+        event.preventDefault();
+        var loginemail = document.querySelector("#email").value;
+        var loginpassword = document.querySelector("#password").value;
+        var flag;
+        loginarr.forEach(function (elem) {
+            if (elem.email == loginemail && elem.password == loginpassword) {
+                alert("Login Successfull");
+                window.location.href = "about.html"
+            }
+        })
+    }
+</script>
+
+</html>
